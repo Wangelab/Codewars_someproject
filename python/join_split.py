@@ -22,3 +22,11 @@ def split_and_merge(string, sp):
     for i, thing in enumerate(newstring):
         newstring[i] = sp.join(list(thing))
     return ' '.join(newstring)
+
+def split_and_merge(string, sp):
+    #my code
+    string3 = []
+    for string2 in string.split(" "):
+        string3.append(sp.join(list(string2))) 
+    string4 = " ".join(string3)
+    return string4
