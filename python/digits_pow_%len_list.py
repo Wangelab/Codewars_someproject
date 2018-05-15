@@ -16,23 +16,24 @@ def dig_pow(n, p):
   for i,c in enumerate(str(n)):
      s += pow(int(c),p+i)
   return s/n if s%n==0 else -1
+# enumerate(sequence, [start=0]) 
+# sequence -- 一个序列、迭代器或其他支持迭代对象。
+# start -- 下标起始位置。
+# 将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。
+# >>>list(enumerate(seasons, start=1))       # 小标从 1 开始
+# [(1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')]
 
 def dig_pow(n, p):
     k, fail = divmod(sum(int(d)**(p + i) for i, d in enumerate(str(n))), n)
     return -1 if fail else k
  
 def dig_pow(n, p):
-    import math
-    # your code
-    # mycode
-    list_n = list(str(n))
-    len_n = len(list_n)
-    total = 0
-    for m in range(0,len_n):
-        total += int(math.pow(int(list_n[m]), p+m))
-    k = total / n
-    q = total % n
-    if q == 0:
-        return k
+    # my code
+    List1 = list(str(n))
+    sum1 = 0
+    for m in range(0,len(List1)):
+        sum1 += int(pow(int(List1[m]), p+m)) 
+    if sum1%n == 0:  # 求余
+        return sum1/n  # 整除
     else:
-        return -1
+         return -1
