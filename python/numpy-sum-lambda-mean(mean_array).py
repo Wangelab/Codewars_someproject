@@ -1,5 +1,11 @@
-
-
+# https://www.codewars.com/kata/563e320cee5dddcf77000158
+# It's the academic year's end, fateful moment of your school report. The averages must be calculated.
+# All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+# Return the average of the given array rounded down to its nearest integer.
+# The array will never be empty.
+# 这是学年结束，你学校报告的决定性时刻。平均值必须计算。所有的学生都来找你，并恳求你计算他们的平均值。简单 ！你只需要写一个脚本。
+# 将给定数组的平均值向下舍入为最接近的整数。
+# 该数组永远不会为空
 import numpy
 def get_average(marks):
     return int(numpy.mean(marks))
